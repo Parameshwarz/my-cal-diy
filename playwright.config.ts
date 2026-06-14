@@ -30,8 +30,8 @@ const IS_EMBED_REACT_TEST = process.argv.some((a) => a.startsWith("--project=@ca
 const webServer: PlaywrightTestConfig["webServer"] = [
   {
     command:
-      "yarn workspace @calcom/web copy-app-store-static && NEXT_PUBLIC_IS_E2E=1 NODE_OPTIONS='--dns-result-order=ipv4first' yarn workspace @calcom/web start -p 3000",
-    port: 3000,
+      "yarn workspace @calcom/web copy-app-store-static && NEXT_PUBLIC_IS_E2E=1 NODE_OPTIONS='--dns-result-order=ipv4first' yarn workspace @calcom/web start -p 3005",
+    port: 3005,
     timeout: 60_000,
     reuseExistingServer: !process.env.CI,
     stdout: "ignore",
